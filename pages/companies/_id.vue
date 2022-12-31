@@ -11,21 +11,19 @@
   </div>
 </template>
 <script>
-import { defineComponent, ref } from 'vue';
+import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
-  name: "CompanyId",
-  components: {
-
-  },
+  name: 'CompanyId',
+  components: {},
   data() {
-    const id = ref();
+    const id = ref()
     return {
-      id
+      id,
     }
   },
-  mounted(){
-    this.id = this.$route.params.id;
-  }
+  mounted() {
+    this.id = this.$route.params.id
+  },
 })
 </script>

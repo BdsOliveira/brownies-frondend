@@ -7,7 +7,6 @@
 <script>
 export default {
   name: 'SellerPage',
-  components: {
-  }
+  components: {},
 }
 </script>

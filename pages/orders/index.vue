@@ -7,7 +7,6 @@
 <script>
 export default {
   name: 'ReportPage',
-  components: {
-  }
+  components: {},
 }
 </script>
