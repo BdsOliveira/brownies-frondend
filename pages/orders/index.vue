@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h1>Index Page works</h1>
+    <h1>Orders Index Page works</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage',
+  name: 'ReportPage',
   components: {},
 }
 </script>

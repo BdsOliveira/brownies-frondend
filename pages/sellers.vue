@@ -1,12 +1,13 @@
 <template>
   <div>
-    <h1>Index Page works</h1>
+    <h1>Sellers Layout</h1>
+    <NuxtChild />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage',
+  name: 'SellersLayout',
   components: {},
 }
 </script>
