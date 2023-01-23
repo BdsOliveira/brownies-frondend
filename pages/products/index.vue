@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Companies Index Page works</h1>
+    <h1>Products Index Page works</h1>
     <div class="" v-for="company in companies" :key="company.id">
       <h1>{{ company.name }}</h1>
     </div>

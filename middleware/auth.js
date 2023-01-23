@@ -1,3 +1,3 @@
 export default () => {
-  console.log("middleware auth sendo executado.");
+  console.log('middleware auth sendo executado.')
 }

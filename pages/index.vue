@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>Index Page works</h1>
+  <div class="flex flex-wrap p-16">
+    Index Page
   </div>
 </template>
 
@@ -8,5 +8,10 @@
 export default {
   name: 'IndexPage',
   components: {},
+  data(){
+    return {
+      value: null
+    }
+  }
 }
 </script>
