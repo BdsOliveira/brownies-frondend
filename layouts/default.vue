@@ -1,10 +1,10 @@
 <template>
-  <div class="container flex flex-row">
-    <SidebarComponent />
-    <div class="m-8">
-      <HeaderComponent />
+  <div class="flex flex-row bg-[#F3F4F6]">
+    <SidebarComponent class="w-1/5"/>
+    <div class="w-4/5">
+      <!-- <HeaderComponent /> -->
       <Nuxt />
-      <FooterComponent />
+      <!-- <FooterComponent /> -->
     </div>
   </div>
 </template>

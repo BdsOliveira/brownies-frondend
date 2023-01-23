@@ -1,6 +1,6 @@
 <template>
-  <div>
-    Index page
+  <div class="flex flex-wrap p-16">
+    Index Page
   </div>
 </template>
 

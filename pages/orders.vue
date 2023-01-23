@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex flex-wrap p-16">
     <h1>Orders Layout</h1>
     <NuxtChild />
   </div>

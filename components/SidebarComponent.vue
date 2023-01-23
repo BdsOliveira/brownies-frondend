@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen bg-[#1F2937] w-1/5 text-white">
+  <div class="h-screen bg-[#1F2937] text-white">
     <div class="container w-full">
         <div class="p-4 bg-[#111827] rounded">
           <NuxtLink class="flex" to="/">
