@@ -1,7 +1,14 @@
 <template>
   <div>
-    <h1>Sellers Index Page works</h1>
-    {{ sellers }}
+    <div v-for="company in sellers" :key="company">
+      <h1>{{ company[0].company.name }}</h1>
+      <div v-for="seller in company" :key="seller.id">
+        {{ seller.name }}
+      </div>
+    <br>
+    <hr>
+    <br>
+    </div>
   </div>
 </template>
 
