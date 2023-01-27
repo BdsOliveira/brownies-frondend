@@ -1,9 +1,7 @@
 <template>
   <div>
     <h1>Companies Index Page works</h1>
-    <div class="" v-for="company in companies" :key="company.id">
-      <h1>{{ company.name }}</h1>
-    </div>
+    {{ companies }}
   </div>
 </template>
 
@@ -13,13 +11,14 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: 'CompanyPage',
   components: {},
-  data(){
-    const companies = fetch('http://localhost:8000/api/companies')
-      .then(function(response) {
-        return response.blob();
-      })
+  async asyncData({$axios}){
+    const companies = await $axios.$get('companies');
     return {
-      companies
+      companies,
+    }
+  },
+  data(){
+    return {
     }
   },
 })

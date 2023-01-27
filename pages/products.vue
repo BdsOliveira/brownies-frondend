@@ -8,6 +8,8 @@
 <script>
 export default {
   name: 'ProductsLayout',
-  components: {},
+  data() {
+    return {}
+  },
 }
 </script>
