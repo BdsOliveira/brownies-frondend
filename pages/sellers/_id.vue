@@ -1,29 +1,69 @@
 <template>
   <div>
     <div>
-      <h1>
-        Edit Seller works!
-        <h2>
-          {{ id }}
-        </h2>
-      </h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th colspan="2">
+              {{ seller.orders[0].seller.name }}
+            </th>
+            <th>
+              {{ seller.orders[0].seller.company.name }} -
+            </th>
+            <th>
+              {{ new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(seller.billing.amount) }}
+            </th>
+          </tr>
+          <tr>
+            <th>
+              Produto Vendido
+            </th>
+            <th>
+              Quantidade vendida
+            </th>
+            <th>
+              Data
+            </th>
+            <th>
+              Total vendido
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="order in seller.orders" :key="order.id" class="">
+            <td>
+              {{ order.product.name }}
+            </td>
+            <td>
+              {{ order.quantity }}
+            </td>
+            <td>
+              {{ order.date }}
+            </td>
+            <td>
+              {{ new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(order.product.price * order.quantity) }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </template>
 <script>
-import { defineComponent, ref } from 'vue'
-
+import { defineComponent } from 'vue'
 export default defineComponent({
-  name: 'SellerId',
+  name: 'Seller',
   components: {},
-  data() {
-    const id = ref()
+  async asyncData({ $axios, route }) {
+    const { id } = route.params
+    const seller = await $axios.$get('sellers/' + id + "/orders")
     return {
-      id,
+      seller
     }
   },
-  mounted() {
-    this.id = this.$route.params.id
+  data() {
+    return {
+    }
   },
 })
 </script>
