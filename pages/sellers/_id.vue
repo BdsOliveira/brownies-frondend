@@ -1,14 +1,14 @@
 <template>
   <div>
     <div>
-      <table class="table">
+      <table class="text-center w-full">
         <thead>
           <tr>
             <th colspan="2">
               {{ seller.orders[0].seller.name }}
             </th>
             <th>
-              {{ seller.orders[0].seller.company.name }} -
+              {{ seller.orders[0].seller.company.name }}
             </th>
             <th>
               {{ new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(seller.billing.amount) }}
@@ -31,7 +31,7 @@
         </thead>
         <tbody>
           <tr v-for="order in seller.orders" :key="order.id" class="">
-            <td>
+            <td class="">
               {{ order.product.name }}
             </td>
             <td>
